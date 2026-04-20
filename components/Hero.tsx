@@ -186,9 +186,9 @@ const Hero = () => {
                                         width: '100%'
                                     }}
                                 >
-                                    <h1 className="text-[28px] sm:text-3xl font-black text-white leading-[1.1] tracking-tighter fade-up font-heading" style={{ animationDelay: '0.2s' }}>
-                                        Sigortada <span className="text-blue-500 italic">Güveni</span>,<br />
-                                        Çözümde <span className="text-brand-red italic text-shadow-sm">Hakikiyi Seçin.</span>
+                                    <h1 className="text-[28px] sm:text-3xl font-black text-white leading-[1.1] tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
+                                        SİGORTADA <span className="text-blue-500 italic">GÜVENİ</span>,<br />
+                                        ÇÖZÜMDE <span className="text-brand-red italic text-shadow-sm">HAKİKİYİ SEÇİN.</span>
                                     </h1>
                                 </div>
                             </div>
@@ -201,9 +201,9 @@ const Hero = () => {
                             {/* Left Column */}
                             <div className="max-w-2xl mx-auto lg:mx-0">
                                 {/* Desktop Only Headline */}
-                                <h1 className="hidden lg:block text-4xl md:text-6xl font-black text-slate-900 leading-[1.2] mb-6 tracking-tight fade-up font-heading" style={{ animationDelay: '0.2s' }}>
-                                    Sigortada <span className="bg-clip-text text-transparent bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue bg-[length:200%_auto] animate-shimmer">Güveni</span>,<br />
-                                    Çözümde <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-red-500 italic drop-shadow-sm">Hakikiyi Seçin.</span>
+                                <h1 className="hidden lg:block text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
+                                    SİGORTADA <span className="bg-clip-text text-transparent bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue bg-[length:200%_auto] animate-shimmer">GÜVENİ</span>,<br />
+                                    ÇÖZÜMDE <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-red-500 italic drop-shadow-sm">HAKİKİYİ SEÇİN.</span>
                                 </h1>
 
 
