@@ -1,12 +1,12 @@
 import React from 'react';
-import { Mail, Phone, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Mail, Phone, ShieldCheck } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="footer-bg text-white pt-20 pb-10">
+        <footer className="footer-bg text-white pt-20 pb-12">
             <div className="wrapper">
                 {/* Main Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pb-16 border-b border-white/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
                     {/* Brand */}
                     <div>
                         <div className="text-xl font-extrabold mb-6 tracking-tight font-heading">
@@ -14,16 +14,9 @@ const Footer = () => {
                             <span className="text-brand-red">çabuk</span>
                             <span className="text-white/30">sigorta</span>
                         </div>
-                        <p className="text-slate-400 leading-relaxed text-sm mb-8 max-w-xs">
-                            Sigortacılığı dijital hız ve insani dokunuşla yeniden tanımlıyoruz. 7/24 uzman desteği ile yanınızdayız.
+                        <p className="text-slate-400 leading-relaxed text-sm max-w-xs">
+                            Sigortacılığı dijital hız ve insani dokunuşla yeniden tanımlıyoruz. Hızlı ve uzman desteği ile her ihtiyacınızda yanınızdayız.
                         </p>
-                        <div className="flex gap-3">
-                            {['fb', 'tw', 'ig', 'li'].map(social => (
-                                <div key={social} className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all cursor-pointer">
-                                    <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
-                                </div>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Contact */}
@@ -70,13 +63,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600">
-                    <p>&copy; 2024 Hakiki Çabuk Sigorta | Tüm Hakları Saklıdır</p>
-                    <div className="flex gap-8">
-                        <a href="#" className="hover:text-white transition-colors">KVKK Aydınlatma</a>
-                        <a href="#" className="hover:text-white transition-colors">Çerez Politikası</a>
-                    </div>
+                {/* Bottom Bar - Only Copyright */}
+                <div className="mt-16 pt-8 border-t border-white/5 flex flex-col items-center">
+                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-600">
+                        &copy; 2026 Hakiki Çabuk Sigorta | Tüm Hakları Saklıdır
+                    </p>
                 </div>
             </div>
         </footer>

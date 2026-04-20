@@ -38,18 +38,18 @@ const PartnerLogos = () => {
                     {partners.map((partner, index) => (
                         <div
                             key={partner.name}
-                            className="bg-white group relative aspect-square md:aspect-[4/3] flex items-center justify-center p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-blue/5 hover:-translate-y-1 transition-all duration-500 ease-out"
+                            className="bg-white group relative aspect-square md:aspect-[4/3] flex items-center justify-center p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-blue/5 hover:-translate-y-1 transition-all duration-500 ease-out"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className="relative w-full h-full grayscale-0 opacity-100 md:grayscale md:opacity-40 md:group-hover:grayscale-0 md:group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                            <div className="relative w-full h-full grayscale-0 opacity-100 md:grayscale md:opacity-50 md:group-hover:grayscale-0 md:group-hover:opacity-100 transition-all duration-700 ease-in-out">
                                 <Image
                                     src={partner.logo}
                                     alt={partner.name}
                                     fill
                                     sizes="(max-width: 640px) 150px, 200px"
                                     className={`object-contain transition-transform duration-700 group-hover:scale-110 ${["DOĞA SİGORTA", "HEPİYİ SİGORTA", "ZURICH SİGORTA"].includes(partner.name)
-                                        ? "scale-[1.3]"
-                                        : "scale-[1.1]"
+                                        ? "scale-[1.25]"
+                                        : "scale-[1.0]"
                                         }`}
                                 />
                             </div>

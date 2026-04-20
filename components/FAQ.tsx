@@ -56,7 +56,7 @@ const FAQ = () => {
         },
         {
             question: "Hasar anında ne yapmalıyım?",
-            answer: "Sakinliğinizi koruyarak öncelikle bir hasar tespit tutanağı tutmalı ve fotoğraflar çekmelisiniz. Ardından 7/24 aktif olan WhatsApp hattımızdan bize ulaşarak hasar danışmanlarımızdan anlık destek alabilirsiniz."
+            answer: "Sakinliğinizi koruyarak öncelikle bir hasar tespit tutanağı tutmalı ve fotoğraflar çekmelisiniz. Ardından her zaman aktif olan WhatsApp hattımızdan bize ulaşarak hasar danışmanlarımızdan hızlı ve profesyonel destek alabilirsiniz."
         },
         {
             question: "Poliçe ödemelerinde taksit imkanı var mı?",

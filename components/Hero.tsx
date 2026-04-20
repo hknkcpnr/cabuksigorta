@@ -143,7 +143,7 @@ const Hero = () => {
                         <div className="relative w-full aspect-[16/10] sm:aspect-video lg:aspect-auto lg:w-full lg:max-w-xl lg:h-[450px] rounded-none lg:rounded-none overflow-hidden lg:overflow-visible bg-white lg:bg-transparent shadow-none lg:shadow-none border-0 lg:border-none lg:translate-x-16 lg:-translate-y-12 transition-all duration-700 hover:scale-105 lg:hover:scale-110">
                             <Image
                                 src={isMobile ? '/mobilbanner.jpg' : '/banner-3.jpg'}
-                                alt="Çabuk Sigorta Çözümleri"
+                                alt="81 İl Kapsamlı Dijital Sigorta Çözümleri - Hakiki Çabuk Sigorta"
                                 fill
                                 priority
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -458,9 +458,9 @@ const Hero = () => {
                                                         </a>
                                                         <a 
                                                             href={product.infoLink}
-                                                            className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-red transition-all py-2"
+                                                            className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/60 text-slate-600 hover:text-brand-red hover:bg-white border border-white/80 shadow-sm transition-all duration-300 text-[10px] font-black uppercase tracking-widest whitespace-nowrap"
                                                         >
-                                                            <Info className="w-3.5 h-3.5" />
+                                                            <Info className="w-4 h-4" />
                                                             BİLGİ
                                                         </a>
                                                     </div>

@@ -2,125 +2,130 @@ import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { ShieldCheck, ArrowRight, CheckCircle2, Info, MessageCircle, PhoneCall } from 'lucide-react';
-import Image from 'next/image';
+import { ShieldCheck, CheckCircle2, MessageCircle, PhoneCall, ArrowRight, Zap, Award, Clock, Heart, Home, Smartphone, Plane, Activity, Building2, ClipboardList, Ribbon, Dog } from 'lucide-react';
+import { Metadata } from 'next';
 
 const productData: Record<string, any> = {
     "trafik-sigortasi": {
-        title: "Trafik Sigortası",
-        description: "Karayolları Motorlu Araçlar Zorunlu Mali Sorumluluk Sigortası (Trafik Sigortası), her araç sahibinin yaptırması kanunen zorunlu olan, kaza anında karşı tarafı koruyan bir sigorta türüdür.",
+        title: "Trafik Sigortası Teklifi | 2026 Güncel Limitler & Hızlı Poliçe",
+        headerTitle: "Trafik Sigortası",
+        description: "2026 yılı yasal limitleri ile uyumlu, Türkiye'nin 81 ilinde geçerli en uygun zorunlu trafik sigortası.",
+        longDescription: "Zorunlu Trafik Sigortası, 2026 yılı itibarıyla güncellenen yüksek yasal limitlerle, trafikte üçüncü şahıslara verilebilecek maddi ve bedeni zararları teminat altına alır. Çabuk Sigorta olarak biz, SEDDK tarafından belirlenen en güncel tavan fiyat uygulamaları üzerinden saniyeler içinde teklif hazırlıyoruz.",
+        requiredInfo: ["TC Kimlik Numarası", "Araç Plaka Numarası", "Ruhsat Seri ve Sıra No"],
         features: [
-            "Karşı tarafın maddi hasarlarını güvence altına alır.",
-            "Üçüncü şahısların bedeni zararlarını (tedavi, sakatlık) karşılar.",
-            "Kaza durumunda hukuki koruma sağlar.",
-            "2024 yılı güncel limitleri ile tam uyumludur."
+            { icon: <ShieldCheck className="w-6 h-6 text-brand-blue" />, title: "2026 Güncel Limitler", desc: "Vefat, sakatlık ve maddi hasarlarda en yüksek yasal teminat garantisi." },
+            { icon: <Zap className="w-6 h-6 text-brand-red" />, title: "Hızlı Teklif", desc: "Ruhsat bilgilerinizle WhatsApp üzerinden 1 dakikada poliçeniz hazır." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "İptal & İade Kolaylığı", desc: "Araç satışı veya poliçe iptallerinde hızlı iade süreci." },
+            { icon: <Award className="w-6 h-6 text-emerald-500" />, title: "Hasarsızlık Koruma", desc: "Basamak yükseltme ve indirim hakkınızın titizlikle takibi." }
         ],
-        sections: [
-            {
-                title: "Trafik Sigortası Nedir?",
-                content: "Zorunlu Trafik Sigortası, aracınızla trafikteyken üçüncü şahıslara (diğer araç sahipleri, yayalar, kamu malları) verebileceğiniz maddi ve bedeni zararları yasal limitler dahilinde karşılayan bir sigortadır. Kendi aracınızdaki hasarı değil, verdiğiniz zararı sizin adınıza sigorta şirketi öder."
-            },
-            {
-                title: "Neden Yaptırılması Zorunludur?",
-                content: "Bu sigorta, trafikte oluşabilecek yüksek maliyetli kazalarda mağdur olan tarafların zararlarının tazmin edilmesini garanti altına almak için devlet tarafından zorunlu tutulmuştur. Sosyal adaleti sağlamak ve kaza sonrası ekonomik kayıpları minimize etmek temel amaçtır."
-            },
-            {
-                title: "Yaptırılmazsa Ne Olur? (Cezaları)",
-                content: "Trafik sigortası olmayan araçlar trafikten men edilir ve otoparka çekilir. Ayrıca para cezası uygulanır. Eski poliçe yenilenmediğinde her ay için %5 gecikme zammı uygulanır. En önemlisi, kaza anında oluşan tüm zarar (milyonlarca lira olabilir) doğrudan araç sahibinden tahsil edilir."
-            },
-            {
-                title: "Ücret Bilgileri ve Fiyatlama",
-                content: "Trafik sigortası fiyatları; aracın plakası (şehri), kullanım amacı (hususi, ticari), aracın markası ve en önemlisi sürücünün 'Hasarsızlık Basamağı'na (1-7 arası) göre değişkenlik gösterir. 2024 yılında fiyatlar, tavan fiyat uygulaması çerçevesinde sigorta şirketleri arasında rekabetçi bir şekilde sunulmaktadır."
-            }
-        ],
-        details: "Trafik Sigortası, trafikte güvenli bir yolculuk için temel şarttır. Poliçenizi yaptırmadan trafiğe çıkmak hem yasal hem de maddi açıdan büyük riskler taşır. Çabuk Sigorta olarak size saniyeler içinde en doğru teklifi sunuyoruz.",
         image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=1200"
     },
     "kasko": {
-        title: "Kasko Sigortası",
-        description: "Aracınızı kaza, hırsızlık, yangın ve doğal afet gibi beklenmedik risklere karşı koruma altına alan en kapsamlı araç sigortasıdır.",
+        title: "Kasko Sigortası | 2026 En Kapsamlı Araç Koruma Paketleri",
+        headerTitle: "Kasko Sigortası",
+        description: "Aracınızın değerini 2026 piyasa koşullarına göre koruyan, en geniş teminatlı kasko çözümleri.",
+        longDescription: "2026 yılı ekonomik koşullarında araç bedellerinin korunması her zamankinden daha kritik. Genişletilmiş Kasko ürünümüz; çarpma, çarpışma, yanma ve hırsızlık gibi ana teminatların yanı sıra deprem, sel ve su baskını gibi doğal afetleri de eksiksiz kapsar.",
+        requiredInfo: ["TC Kimlik Numarası", "Araç Plaka Numarası", "Ruhsat Seri Kodu", "Araç KM Bilgisi"],
         features: [
-            "Çarpma, çarpışma ve devrilme hasarları.",
-            "Hırsızlık ve hırsızlığa teşebbüs.",
-            "Yangın, sel ve su baskını teminatları.",
-            "7/24 Yol yardım ve ikame araç hizmeti."
+            { icon: <ShieldCheck className="w-6 h-6 text-brand-blue" />, title: "Sınırsız İMM", desc: "Karşı tarafa verilebilecek zararlarda ucu açık, sınırsız koruma kalkanı." },
+            { icon: <Zap className="w-6 h-6 text-brand-red" />, title: "Yetkili Servis", desc: "81 ilde markanızın tüm yetkili servislerinde orijinal parça garantisi." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "Yol Yardım Desteği", desc: "Çekici ve yakıt ikmali Türkiye'nin her noktasında profesyonel hizmet." },
+            { icon: <Award className="w-6 h-6 text-emerald-500" />, title: "Sıfır Değer Koruması", desc: "Yeni araçlarda ilk yıl içinde yaşanacak tam hasarlarda 0 km araç bedeli." }
         ],
-        details: "Kasko sigortası, zorunlu trafik sigortasının aksine sizin aracınızı ve bütçenizi korur. Genişletilmiş kasko paketleri ile mini onarım, cam kırılması ve ferdi kaza gibi ek teminatlarla tam koruma sağlayabilirsiniz.",
         image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1200"
     },
     "tamamlayici-saglik": {
-        title: "Tamamlayıcı Sağlık Sigortası",
-        description: "SGK anlaşmalı özel hastanelerde fark ücreti ödemeden muayene ve tedavi olmanızı sağlayan bütçe dostu sağlık çözümüdür.",
+        title: "Tamamlayıcı Sağlık Sigortası | 2026 Özel Hastane Ağı",
+        headerTitle: "Tamamlayıcı Sağlık",
+        description: "2026 yılında SGK anlaşmalı en seçkin özel hastanelerde ek ücret ödemeden tedavi imkanı.",
+        longDescription: "Tamamlayıcı Sağlık Sigortası (TSS), SGK'lı çalışanlar için 2026 yılında en konforlu sağlık çözümüdür. Fark ücreti ödemeden modern tıbbın tüm imkanlarından yararlanabilirsiniz.",
+        requiredInfo: ["TC Kimlik Numaraları (Tüm Bireyler)", "Boy ve Kilo Bilgisi"],
         features: [
-            "Özel hastanelerde 0 TL fark ücreti.",
-            "Yatarak ve ayakta tedavi seçenekleri.",
-            "Sınırsız yatarak tedavi teminatı.",
-            "Yıllık 10 adet doktor muayenesi hakkı."
+            { icon: <Heart className="w-6 h-6 text-brand-red" />, title: "0 TL Katılım Payı", desc: "Özel hastanelerde fark ödemeden sadece devlet katılım payıyla muayene." },
+            { icon: <Zap className="w-6 h-6 text-brand-blue" />, title: "Sınırsız Yatarak", desc: "Ameliyat, oda-yemek ve yoğun bakım giderlerinde sınırsız kapsam." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "Doğum Teminatı", desc: "Bekleme süreli veya süresiz yeni nesil doğum paketi seçenekleri." },
+            { icon: <Award className="w-6 h-6 text-emerald-500" />, title: "Vergi Avantajı", desc: "Ödediğiniz primin bir kısmını vergi indirimi olarak geri alabilirsiniz." }
         ],
-        details: "SGK'lı çalışanlar, memurlar veya emekliler için geçerlidir. Sadece SGK ile anlaşmalı özel hastanelerde geçerli olup, konforlu bir sağlık hizmeti almanızı sağlar. Vergi avantajından yararlanarak maliyetinizi daha da düşürebilirsiniz.",
         image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200"
     },
-    "dask": {
-        title: "DASK (Zorunlu Deprem Sigortası)",
-        description: "Deprem ve deprem sonucu meydana gelen yangın, infilak, dev dalga (tsunami) veya yer kaymasının doğrudan neden olacağı maddi zararları karşılar.",
-        features: [
-            "Binalardaki deprem hasarlarını nakit karşılar.",
-            "Devlet güvencesindedir (Doğal Afet Sigortaları Kurumu).",
-            "Su, elektrik ve doğalgaz abonelikleri için zorunludur.",
-            "Tapu işlemlerinde mecburi tutulur."
-        ],
-        details: "DASK, belediye sınırları içindeki tüm konutlar için zorunlu bir sigortadır. Amaç, deprem sonrası yaşamın hızla normale dönmesini sağlamaktır.",
-        image: "https://images.unsplash.com/photo-1542601039-291110c80149?auto=format&fit=crop&q=80&w=1200"
-    },
     "ozel-saglik": {
-        title: "Özel Sağlık Sigortası",
-        description: "En geniş hastane ağında, en yüksek limitlerle ve en konforlu koşullarda sağlık hizmeti almanızı sağlayan kişiye özel sigortadır.",
+        title: "Özel Sağlık Sigortası | En Geniş Hastane Ağı & Global Koruma",
+        headerTitle: "Özel Sağlık Sigortası",
+        description: "Dünya standartlarında sağlık hizmeti ve dilediğiniz doktoru seçme özgürlüğü.",
+        longDescription: "Özel Sağlık Sigortası, en geniş hastane ağında, SGK şartı aranmaksızın size en konforlu koşullarda tedavi imkanı sunar. Yurt dışı tedavi ve ücretsiz check-up gibi ek ayrıcalıklar hayatınızı kolaylaştırır.",
+        requiredInfo: ["TC Kimlik Numarası", "Boy / Kilo", "Eski Poliçe Varsa Bilgisi"],
         features: [
-            "Hemen hemen tüm özel hastanelerde geçerlidir.",
-            "Yurt dışı tedavi teminatı eklenebilir.",
-            "Check-up ve diş muayenesi gibi ek hizmetler.",
-            "Limitsiz sağlık güvencesi."
+            { icon: <Heart className="w-6 h-6 text-brand-red" />, title: "Limitsiz Güvence", desc: "Hemen hemen tüm özel hastanelerde geçerli limitsiz ve esnek seçenekler." },
+            { icon: <Plane className="w-6 h-6 text-sky-500" />, title: "Global Koruma", desc: "Sınır tanımayan sağlık güvencesi ile dünyanın her yerinde yanınızdayız." },
+            { icon: <Activity className="w-6 h-6 text-emerald-500" />, title: "Check-Up Paketi", desc: "Yılda bir kez ücretsiz profesyonel check-up ve diş bakım hizmeti." },
+            { icon: <ShieldCheck className="w-6 h-6 text-brand-blue" />, title: "Esnek Teminat", desc: "Sadece ihtiyacınız olan branşları içeren maliyet odaklı paketler." }
         ],
-        details: "Özel sağlık sigortası ile dilediğiniz doktoru ve hastaneyi seçme özgürlüğüne sahip olursunuz. SGK zorunluluğu yoktur.",
         image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200"
     },
-    "konut-sigortasi": {
-        title: "Konut Sigortası",
-        description: "Evinizi ve içindeki eşyaları yangın, hırsızlık, su baskını ve daha pek çok riski kapsayacak şekilde güvenceye alır.",
+    "dask": {
+        title: "DASK Sigortası | 2026 Zorunlu Deprem Sigortası",
+        headerTitle: "DASK Sigortası",
+        description: "Deprem ve deprem kaynaklı afetlere karşı devlet güvenceli binanızı koruma altına alın.",
+        longDescription: "2026 yılı güncellenen yapı birim maliyetleri üzerinden evinizi güvenceye alın. Deprem sonrası yaşamın hızla normale dönmesi için DASK en büyük yasal güvencenizdir.",
+        requiredInfo: ["TC Kimlik Numarası", "Tam Açık Adres", "Tapu Ada/Parsel veya Tapu Kaydı"],
         features: [
-            "Eşya teminatı (hırsızlık, hasar).",
-            "Komşulara verilen zararların karşılanması.",
-            "Dekorasyon ve cam kırılması hasarları.",
-            "Ücretsiz kombi/klima bakımı ve tesisatçı hizmeti."
+            { icon: <Building2 className="w-6 h-6 text-brand-blue" />, title: "Yasal Zorunluluk", desc: "Tapu, elektrik ve su abonelik işlemleri için zorunlu yasal belge." },
+            { icon: <Zap className="w-6 h-6 text-brand-red" />, title: "Devlet Güvencesi", desc: "Doğal Afet Sigortaları Kurumu tarafından sunulan tam mali kalkan." },
+            { icon: <ShieldCheck className="w-6 h-6 text-emerald-500" />, title: "Anında Poliçe", desc: "Adres bilgilerinizle WhatsApp'tan saniyeler içinde yasal poliçe." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "Hasar Ödemesi", desc: "Olası bir sarsıntı anında hızlı nakit akışı ve hasar yönetimi." }
         ],
-        details: "Sadece binayı değil, yaşam alanınızı ve anılarınızı da korur. Kiracılar için de 'Eşya Sigortası' şeklinde yapılabilir.",
+        image: "https://images.unsplash.com/photo-1542601039-291110c80149?auto=format&fit=crop&q=80&w=1200"
+    },
+    "konut-sigortasi": {
+        title: "Konut Sigortası | Evinizi ve Eşyalarınızı Güvenle Koruyun",
+        headerTitle: "Konut Sigortası",
+        description: "Yangın, hırsızlık ve su baskını gibi ev içi tüm risklere karşı tam kapsamlı çözüm.",
+        longDescription: "Konut Sigortası, sadece binanızı değil; evinizdeki tüm değerli eşyaları, mobilyaları ve elektronik cihazları korur. Çilingirden tesisatçıya kadar ücretsiz asistanlık hizmetleri de paketimize dahildir.",
+        requiredInfo: ["TC Kimlik Numarası", "Tam Adres", "Bina m² ve İnşa Yılı Bilgisi"],
+        features: [
+            { icon: <Home className="w-6 h-6 text-brand-blue" />, title: "Eşya Koruması", desc: "Hırsızlık ve kaza sonucu oluşan eşya zararlarına karşı tam teminat." },
+            { icon: <Zap className="w-6 h-6 text-brand-red" />, title: "Asistanlık", desc: "Ücretsiz kombi/klima bakımı, çilingir ve su tesisatı desteği." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "Su Baskını", desc: "İçeriden veya dışarıdan kaynaklı tüm su hasarlarında tam güvence." },
+            { icon: <Award className="w-6 h-6 text-emerald-500" />, title: "Komşu Sorumluluk", desc: "Komşunuza verebileceğiniz zararları (örn: su sızması) karşılar." }
+        ],
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200"
     },
     "seyahat-saglik": {
-        title: "Seyahat Sağlık Sigortası",
-        description: "Yurt dışı seyahatlerinizde başınıza gelebilecek ani hastalık veya kaza durumlarında tıbbi yardım ve transfer hizmeti sunan zorunlu sigortadır.",
+        title: "Seyahat Sağlık Sigortası | Vize Uyumlu & Global Koruma",
+        headerTitle: "Seyahat Sağlık",
+        description: "Yurt dışı seyahatlerinizde vize başvurularına uyumlu 30.000€ teminatlı koruma.",
+        longDescription: "Schengen vizesi başta olmak üzere tüm vize başvurularınızda zorunlu olan Seyahat Sağlık Sigortası, yurt dışındayken yaşayabileceğiniz kaza veya ani hastalık giderlerini karşılar. Kayıp bagajdan geri dönüş masraflarına kadar geniş bir asistanlık ağına sahip olun.",
+        requiredInfo: ["TC Kimlik Numarası", "Gidilecek Ülke Grubu", "Seyahat Başlangıç ve Bitiş Tarihi"],
         features: [
-            "Vize başvuruları (Schengen vb.) için zorunludur.",
-            "30.000 Euro teminatlı dünya genelinde geçerlilik.",
-            "Tıbbi nakil ve vefat durumunda cenaze nakli.",
-            "Kayıp valiz ve seyahat iptali ek teminatları."
+            { icon: <Plane className="w-6 h-6 text-sky-500" />, title: "Vize Uyumlu", desc: "Schengen ve tüm dünya vizeleri için geçerli resmi poliçe." },
+            { icon: <ShieldCheck className="w-6 h-6 text-brand-blue" />, title: "Bagaj Koruma", desc: "Uçuş sırasında kaybolan veya hasar gören bagajlar için teminat." },
+            { icon: <Activity className="w-6 h-6 text-brand-red" />, title: "Tıbbi Destek", desc: "Yurt dışındaki hastane ve ilaç masrafları için anında provizyon." },
+            { icon: <Clock className="w-6 h-6 text-orange-500" />, title: "Asistan Hizmeti", desc: "Geri dönüş organizasyonu ve kayıp evrak danışmanlığı." }
         ],
-        details: "Yurt dışına çıkmadan önce yaptırılması gerekir. Tatilinizi veya iş seyahatinizi beklenmedik hastane masraflarından korur.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109c05e?auto=format&fit=crop&q=80&w=1200"
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109c055?auto=format&fit=crop&q=80&w=1200"
     },
     "cep-telefonu": {
-        title: "Cep Telefonu Sigortası",
-        description: "Yeni nesil akıllı telefonlarınızı ekran kırılması, sıvı teması ve hırsızlığa karşı koruyan cihaz sigortasıdır.",
+        title: "Cep Telefonu Sigortası | Ekran Kırılması & Sıvı Teması Koruması",
+        headerTitle: "Cep Telefonu Sigortası",
+        description: "Akıllı telefonlarınızı yüksek tamir maliyetlerine karşı 2026 standartlarında koruyun.",
+        longDescription: "Yeni nesil cihazların ekran değişim maliyetleri binlerce lirayı bulabiliyor. Cep Telefonu Sigortası ile kaza sonucu kırılma veya sıvı teması durumlarında yetkili servis güvencesiyle onarım imkanı yakalayın.",
+        requiredInfo: ["TC Kimlik Numarası", "Cihazın IMEI Numarası", "Cihaz Marka ve Model Bilgisi"],
         features: [
-            "Ekran kırılmasına karşı %100 güvence.",
-            "Sıvı teması ve yüksek voltaj hasarları.",
-            "Yetkili servis garantisi ile onarım.",
-            "Kaza sonucu oluşan her türlü hasar."
+            { icon: <Smartphone className="w-6 h-6 text-slate-700" />, title: "Ekran Onarımı", desc: "Sadece orijinal parça kullanılarak profesyonel ekran değişimi." },
+            { icon: <Zap className="w-6 h-6 text-brand-red" />, title: "Sıvı Teması", desc: "İstenmeyen dökülmeler ve sıvı hasarlarına karşı tam tamir kapsamı." },
+            { icon: <Clock className="w-6 h-6 text-brand-blue" />, title: "Ücretsiz Kargo", desc: "Hasarlı cihazın evden alınıp servis sonrası eve teslim edilmesi." },
+            { icon: <Award className="w-6 h-6 text-emerald-500" />, title: "Hırsızlık", desc: "Zor kullanılarak yapılan hırsızlıklara karşı ek teminat imkanı." }
         ],
-        details: "Telefonların yüksek tamir maliyetlerine karşı cebinizi korur. Sadece yeni (genellikle ilk 30 gün içinde alınan) cihazlar için yapılabilir.",
         image: "https://images.unsplash.com/photo-1556656793-062ff987b50d?auto=format&fit=crop&q=80&w=1200"
     }
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params;
+    const product = productData[id];
+    if (!product) return { title: "Ürün Bulunamadı | Çabuk Sigorta" };
+    return { title: product.title, description: product.description };
+}
 
 export default async function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
@@ -130,129 +135,133 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
         return (
             <div className="min-h-screen flex items-center justify-center p-6 bg-slate-50">
                 <div className="text-center">
-                    <h1 className="text-4xl font-black text-slate-900 mb-4">Ürün Bulunamadı</h1>
-                    <p className="text-slate-600 mb-8">Aradığınız sigorta ürünü henüz sistemimize eklenmemiş olabilir.</p>
-                    <a href="/" className="bg-brand-red text-white px-8 py-3 rounded-full font-bold">Ana Sayfaya Dön</a>
+                    <h1 className="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Ürün Kaydı Eksik</h1>
+                    <p className="text-slate-500 mb-8 max-w-sm mx-auto">Bu ürün için detaylı bilgi sayfası hazırlanıyor. Hemen teklif almak için WhatsApp hattımıza yazabilirsiniz.</p>
+                    <div className="flex flex-col gap-3 max-w-xs mx-auto">
+                        <a href={`https://wa.me/905352621717?text=Merhaba, bilgi almak istiyorum.`} className="bg-brand-red text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-xl shadow-red-500/20">Hemen WhatsApp&apos;a Yaz</a>
+                        <a href="/" className="text-slate-400 font-bold uppercase text-[10px] tracking-widest hover:text-brand-blue py-2 transition-colors">Ana Sayfaya Dön</a>
+                    </div>
                 </div>
             </div>
         );
     }
 
     return (
-        <main className="min-h-screen bg-slate-50/50">
+        <main className="min-h-screen bg-white">
             <Navbar />
             
-            {/* Hero Section */}
-            <header className="relative min-h-[calc(100vh-61px)] flex flex-col justify-center overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 z-0">
-                    <img src={product.image} alt={product.title} className="w-full h-full object-cover opacity-40 mix-blend-overlay" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
+            {/* Header Area */}
+            <header className="pt-20 pb-16 bg-slate-900 relative overflow-hidden text-center">
+                <div className="absolute inset-0 opacity-20">
+                    <img src={product.image} alt={product.headerTitle} className="w-full h-full object-cover blur-sm" />
                 </div>
-
-                <div className="wrapper relative z-10">
-                    <div className="max-w-3xl text-center lg:text-left mx-auto lg:mx-0">
-                        <div className="inline-flex items-center gap-2 bg-brand-red text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8 animate-fade-in">
-                            <ShieldCheck className="w-4 h-4" />
-                            Kurumsal Sigorta Çözümleri
-                        </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight">
-                            {product.title}
-                        </h1>
-                        <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl font-medium">
-                            {product.description}
-                        </p>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900" />
+                <div className="wrapper relative z-10 pt-4">
+                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white/90 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 border border-white/10">
+                        <ShieldCheck className="w-3.5 h-3.5 text-brand-red" />
+                        2026 Güncel Güvence Standartları
                     </div>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tight leading-tight">{product.headerTitle}</h1>
+                    <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto font-medium">{product.description}</p>
                 </div>
             </header>
 
-            {/* Content Section */}
             <section className="py-20 lg:py-28">
                 <div className="wrapper">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
                         
-                        {/* Main Content */}
-                        <div className="lg:col-span-7 space-y-12">
-                            {/* Key Sections */}
-                            {product.sections && (
-                                <div className="space-y-8">
-                                    {product.sections.map((section: any, idx: number) => (
-                                        <div key={idx} className="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-500">
-                                            <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-4 flex items-center gap-3">
-                                                <div className="w-2 h-6 bg-brand-blue rounded-full" />
-                                                {section.title}
-                                            </h3>
-                                            <p className="text-slate-600 leading-relaxed font-medium">
-                                                {section.content}
-                                            </p>
-                                        </div>
-                                    ))}
+                        <div className="lg:col-span-8 space-y-24">
+                            {/* Detailed Info */}
+                            <section>
+                                <div className="flex items-center gap-4 mb-10">
+                                    <div className="h-10 w-1.5 bg-brand-red rounded-full" />
+                                    <h2 className="text-3xl font-black text-slate-900 tracking-tight">Kapsamlı Bilgilendirme</h2>
                                 </div>
-                            )}
+                                <p className="text-slate-500 text-lg leading-relaxed font-medium">{product.longDescription}</p>
+                            </section>
 
-                            <div className="bg-white p-10 lg:p-12 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100">
-                                <h2 className="text-3xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3">
-                                    <div className="w-1.5 h-8 bg-brand-red rounded-full" />
-                                    Teminat Özeti
-                                </h2>
-                                <p className="text-slate-600 leading-loose text-lg font-medium italic mb-8">
-                                    {product.details}
-                                </p>
-                                
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {product.features.map((feature: string, idx: number) => (
-                                        <div key={idx} className="flex items-start gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100 group transition-all">
-                                            <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 mt-1">
-                                                <CheckCircle2 className="w-4 h-4 text-brand-blue" />
+                            {/* Required Documents Section */}
+                            <section className="bg-slate-50 p-10 md:p-16 rounded-[4rem] border border-slate-100 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-full -mr-16 -mt-16" />
+                                <div className="flex items-center gap-5 mb-12 relative z-10 text-center md:text-left">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md">
+                                        <ClipboardList className="w-7 h-7 text-brand-red" />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase">Hazırlamanız Gerekenler</h2>
+                                        <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Hızlı Teklif İçin Yanınızda Bulunsun</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
+                                    {product.requiredInfo && product.requiredInfo.map((info: string, idx: number) => (
+                                        <div key={idx} className="flex items-center gap-4 bg-white p-6 rounded-[1.8rem] border border-slate-100 group hover:border-brand-blue transition-all duration-300 hover:shadow-lg hover:shadow-brand-blue/5">
+                                            <div className="w-7 h-7 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                                                <CheckCircle2 className="w-4 h-4" />
                                             </div>
-                                            <span className="text-slate-700 font-bold text-sm leading-snug">{feature}</span>
+                                            <span className="text-slate-700 font-black text-sm tracking-tight uppercase leading-none">{info}</span>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                                <div className="mt-10 pt-8 border-t border-slate-100 flex items-center justify-between opacity-60">
+                                    <p className="text-[10px] text-slate-400 font-bold italic">* Bilgileriniz KVKK kapsamında %100 güvence altındadır.</p>
+                                    <ShieldCheck className="w-5 h-5 text-emerald-500" />
+                                </div>
+                            </section>
+
+                            {/* Features Grid */}
+                            <section>
+                                <div className="flex items-center gap-4 mb-14">
+                                    <div className="h-10 w-1.5 bg-brand-blue rounded-full" />
+                                    <h2 className="text-3xl font-black text-slate-900 tracking-tight uppercase">Ürün Avantajları</h2>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                                    {product.features && product.features.map((feature: any, idx: number) => (
+                                        <div key={idx} className="bg-white p-10 rounded-[3rem] border border-slate-100 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 group">
+                                            <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-sm border border-slate-50">{feature.icon}</div>
+                                            <h4 className="text-xl font-black text-slate-900 mb-4 tracking-tight">{feature.title}</h4>
+                                            <p className="text-slate-500 text-base leading-relaxed font-medium">{feature.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
                         </div>
 
-                        {/* Sidebar / CTA */}
-                        <aside className="lg:col-span-5 sticky top-32 space-y-6">
-                            <div className="bg-white p-10 rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-full blur-3xl -mr-16 -mt-16" />
+                        {/* Sidebar */}
+                        <aside className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-8">
+                            <div className="bg-white p-12 rounded-[3.5rem] border border-slate-100 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] text-center relative overflow-hidden group">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-red via-brand-blue to-brand-red animate-shimmer"></div>
+                                <h3 className="text-3xl font-black text-slate-900 mb-6 tracking-tighter">İhtiyacın Olan <br/>Poliçe Tek Tıkla.</h3>
+                                <p className="text-slate-500 mb-12 text-base font-medium leading-relaxed">2026 vizyonumuzla en doğru teklifi saniyeler içinde WhatsApp üzerinden hazırlıyoruz.</p>
                                 
-                                <h3 className="text-2xl font-black text-slate-800 mb-6 relative z-10 font-heading tracking-tight">Anında Teklif Al</h3>
-                                <p className="text-slate-500 mb-10 text-base leading-relaxed relative z-10 font-medium font-outfit">
-                                    Dakikalarca beklemenize gerek yok. Tek tıkla WhatsApp üzerinden bize ulaşın, poliçeniz anında cebinizde olsun.
-                                </p>
-                                
-                                <div className="space-y-4 relative z-10">
+                                <div className="space-y-4">
                                     <a 
-                                        href={`https://wa.me/905352621717?text=${encodeURIComponent(product.title + " hakkında hızlı teklif almak istiyorum.")}`}
-                                        className="w-full h-14 bg-[#25D366] text-white rounded-2xl font-black uppercase text-[10px] tracking-[0.2em] flex items-center justify-center gap-3 transition-all hover:bg-[#128C7E] shadow-lg shadow-green-500/20 active:scale-[0.98]"
+                                        href={`https://wa.me/905352621717?text=${encodeURIComponent(product.headerTitle + " teklifi almak istiyorum. Hazırlanması gereken bilgilerim yanımda.")}`}
+                                        className="w-full h-18 lg:h-20 bg-[#25D366] text-white rounded-[1.5rem] font-black text-[11px] tracking-[0.2em] uppercase flex items-center justify-center gap-4 hover:scale-[1.03] active:scale-[0.97] transition-all shadow-2xl shadow-green-500/25"
+                                        target="_blank" rel="noopener noreferrer"
                                     >
-                                        <MessageCircle className="w-5 h-5 fill-white/10" />
-                                        WhatsApp&apos;tan Yaz
+                                        <MessageCircle className="w-6 h-6 fill-white/10" />
+                                        WhatsApp Teklif
+                                        <ArrowRight className="w-4 h-4 opacity-30" />
                                     </a>
-                                    <a 
-                                        href="tel:02323367172"
-                                        className="w-full h-14 bg-slate-50 border border-slate-100 text-slate-600 rounded-2xl font-black uppercase text-[10px] tracking-[0.2em] flex items-center justify-center gap-3 transition-all hover:bg-slate-100 active:scale-[0.98]"
-                                    >
-                                        <PhoneCall className="w-5 h-5" />
-                                        Bizi Arayın
+                                    <a href="tel:02323367172" className="w-full h-18 lg:h-20 bg-slate-50 text-slate-600 border border-slate-100 rounded-[1.5rem] font-black text-[11px] tracking-[0.2em] uppercase flex items-center justify-center gap-4 hover:bg-slate-100 transition-all">
+                                        <PhoneCall className="w-6 h-6 opacity-40" />
+                                        Hemen Bizi Arayın
                                     </a>
                                 </div>
-                                
-                                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center justify-center">
-                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">10.000+ MUTLU MÜŞTERİ</span>
+                                <div className="mt-10 pt-8 border-t border-slate-50 flex items-center justify-center gap-3">
+                                    <Award className="w-4 h-4 text-brand-blue" />
+                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Resmi Yetkili Acente</span>
                                 </div>
                             </div>
-                            
-                            <div className="bg-white p-8 rounded-[2rem] border border-slate-200">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
-                                        <Info className="w-6 h-6 text-orange-500" />
-                                    </div>
-                                    <h4 className="text-lg font-black text-slate-900">Güven Veriyoruz</h4>
+
+                            {/* Visual Signal */}
+                            <div className="bg-brand-blue/5 p-8 rounded-[2.5rem] border border-brand-blue/10 flex items-center gap-5 group">
+                                <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 group-hover:-rotate-6 transition-transform duration-500">
+                                    <ShieldCheck className="w-7 h-7 text-brand-blue" />
                                 </div>
-                                <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                                    Tüm süreçlerimiz KVKK kapsamında korunmakta ve en güvenilir sigorta şirketleri ile çalışmaktayız.
-                                </p>
+                                <div className="text-xs font-bold text-slate-600 leading-relaxed uppercase tracking-tighter">
+                                    Poliçelerimiz <span className="text-brand-blue">Türkiye&apos;nin 81 ilinde</span> servis garantili ve tam yetkilidir.
+                                </div>
                             </div>
                         </aside>
 
