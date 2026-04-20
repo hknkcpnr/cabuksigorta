@@ -13,19 +13,19 @@ const Navbar = () => {
         <nav className="sticky top-0 z-[100] glass-nav border-b border-slate-100">
             <div className="w-full px-6 md:px-12 flex items-center justify-between py-2.5">
                 {/* Logo */}
-                <a href="/" className="relative w-40 sm:w-44 shrink-0 transition-transform hover:scale-105">
-                    <Image src="/cabuksigortaLogo.png" alt="Çabuk Sigorta" width={180} height={160} className="w-full h-auto" />
+                <a href="/" className="relative w-56 sm:w-64 shrink-0 transition-transform hover:scale-105">
+                    <Image src="/cabuksigortaLogo.png" alt="Çabuk Sigorta" width={200} height={160} className="w-full h-auto" />
                 </a>
 
                 {/* Desktop Nav Links */}
                 <div className="hidden lg:flex items-center gap-10">
-                    <a href="#hizmetler" className="text-[14px] font-semibold text-slate-700 hover:text-brand-blue transition-colors">
+                    <a href="/#hizmetler" className="text-[14px] font-semibold text-slate-700 hover:text-brand-blue transition-colors">
                         Ürünlerimiz
                     </a>
-                    <a href="#iletisim" className="text-[14px] font-semibold text-slate-700 hover:text-brand-blue transition-colors">
+                    <a href="/#iletisim" className="text-[14px] font-semibold text-slate-700 hover:text-brand-blue transition-colors">
                         İletişim
                     </a>
-                    <a href="#sss" className="group flex items-center gap-2.5 text-[14px] font-bold text-slate-700 hover:text-brand-blue transition-colors">
+                    <a href="/#sss" className="group flex items-center gap-2.5 text-[14px] font-bold text-slate-700 hover:text-brand-blue transition-colors">
                         Sıkça Sorulan Sorular
                         <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100/50 group-hover:bg-brand-blue group-hover:border-brand-blue transition-all">
                             <HelpCircle className="w-3.5 h-3.5 text-brand-blue group-hover:text-white transition-colors" />
@@ -49,7 +49,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Toggle Button */}
-                <button 
+                <button
                     onClick={toggleMenu}
                     className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
                     aria-label="Menüyü Aç/Kapat"
@@ -59,30 +59,30 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`lg:hidden fixed inset-x-0 top-[61px] bg-white border-b border-slate-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'}`}>
+            <div className={`lg:hidden fixed inset-x-0 top-[80px] bg-white border-b border-slate-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'}`}>
                 <div className="p-6 flex flex-col gap-6">
                     {/* Links */}
                     <div className="flex flex-col gap-2">
-                        <a href="#hizmetler" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
+                        <a href="/#hizmetler" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
                             <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
                                 <Grid className="w-5 h-5 text-brand-blue" />
                             </div>
                             Ürünlerimiz
                         </a>
-                        <a href="#sss" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
+                        <a href="/#sss" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
                             <div className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center">
                                 <HelpCircle className="w-5 h-5 text-slate-500" />
                             </div>
                             Sıkça Sorulan Sorular
                         </a>
-                        <a href="#iletisim" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
+                        <a href="/#iletisim" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 text-lg font-bold text-slate-800 hover:text-brand-blue transition-colors p-3 rounded-xl hover:bg-slate-50">
                             <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center">
                                 <MapPin className="w-5 h-5 text-brand-red" />
                             </div>
                             İletişim
                         </a>
                     </div>
-                    
+
                     <div className="h-px bg-slate-100 w-full" />
 
                     {/* Contact Info */}

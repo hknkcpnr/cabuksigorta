@@ -17,7 +17,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Stats />
+
       <TurkeyCoverage />
       <PartnerLogos />
       <Testimonials />
