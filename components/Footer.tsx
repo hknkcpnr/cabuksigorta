@@ -9,10 +9,15 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
                     {/* Brand */}
                     <div>
-                        <div className="text-xl font-extrabold mb-6 tracking-tight font-heading">
-                            <span className="text-white">hakiki</span>
-                            <span className="text-brand-red">çabuk</span>
-                            <span className="text-white/30">sigorta</span>
+                        <div className="relative inline-flex items-center mb-6 pr-12">
+                            <div className="text-xl font-extrabold tracking-tight font-heading">
+                                <span className="text-white">hakiki</span>
+                                <span className="text-brand-red">çabuk</span>
+                                <span className="text-white/30">sigorta</span>
+                            </div>
+                            <div className="absolute top-[-4px] right-0 bg-white/10 text-white px-1.5 py-0.5 rounded text-[8px] font-black tracking-widest border border-white/10">
+                                .COM.TR
+                            </div>
                         </div>
                         <p className="text-slate-400 leading-relaxed text-sm max-w-xs">
                             Sigortacılığı dijital hız ve insani dokunuşla yeniden tanımlıyoruz. Hızlı ve uzman desteği ile her ihtiyacınızda yanınızdayız.
