@@ -177,18 +177,14 @@ const Hero = () => {
                                 Türkiye&apos;nin Dijital Sigorta Acentesi
                             </div>
 
-                            {/* Main Title Over the Image - Trapezoid Box (MOBILE ONLY) */}
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-full flex justify-center lg:hidden">
+                            {/* Main Title Over the Image - Minimalist White Box (MOBILE ONLY) */}
+                            <div className="absolute bottom-0 left-0 right-0 z-10 w-full lg:hidden">
                                 <div 
-                                    className="bg-black/35 backdrop-blur-[2px] px-10 pt-6 pb-4 flex flex-col items-center text-center"
-                                    style={{ 
-                                        clipPath: 'polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%)',
-                                        width: '100%'
-                                    }}
+                                    className="bg-white/95 backdrop-blur-md px-6 py-6 border-t border-slate-100 flex flex-col items-center text-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)]"
                                 >
-                                    <h1 className="text-[28px] sm:text-3xl font-black text-white leading-[1.1] tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
-                                        SİGORTADA <span className="text-blue-500 italic">GÜVENİ</span>,<br />
-                                        ÇÖZÜMDE <span className="text-brand-red italic text-shadow-sm">HAKİKİYİ SEÇİN.</span>
+                                    <h1 className="text-[24px] font-black text-slate-900 leading-[1.1] tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
+                                        SİGORTADA <span className="text-blue-600">GÜVENİ</span>,<br />
+                                        ÇÖZÜMDE <span className="text-brand-red italic">HAKİKİYİ SEÇİN.</span>
                                     </h1>
                                 </div>
                             </div>
