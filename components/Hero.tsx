@@ -182,9 +182,8 @@ const Hero = () => {
                                 <div 
                                     className="bg-white/95 backdrop-blur-md px-6 py-6 border-t border-slate-100 flex flex-col items-center text-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)]"
                                 >
-                                    <h1 className="text-[24px] font-black text-slate-900 leading-[1.1] tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
-                                        SİGORTADA <span className="text-blue-600">GÜVENİ</span>,<br />
-                                        ÇÖZÜMDE <span className="text-brand-red italic">HAKİKİYİ SEÇİN.</span>
+                                    <h1 className="text-[14px] sm:text-[16px] font-black text-slate-900 leading-none tracking-tight fade-up font-heading uppercase whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
+                                        SİGORTADA <span className="text-blue-600">GÜVENİ</span>, ÇÖZÜMDE <span className="text-brand-red italic">HAKİKİYİ SEÇİN.</span>
                                     </h1>
                                 </div>
                             </div>
