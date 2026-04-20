@@ -177,13 +177,17 @@ const Hero = () => {
                                 Türkiye&apos;nin Dijital Sigorta Acentesi
                             </div>
 
-                            {/* Main Title Over the Image - Minimalist White Box (MOBILE ONLY) */}
-                            <div className="absolute bottom-0 left-0 right-0 z-10 w-full lg:hidden">
-                                <div 
-                                    className="bg-white/95 backdrop-blur-md px-6 py-6 border-t border-slate-100 flex flex-col items-center text-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)]"
+                            {/* Main Title Over the Image - White Trapezoid + Blue Cap (MOBILE ONLY) */}
+                            <div className="absolute bottom-0 left-0 right-0 z-10 w-full flex flex-col items-center lg:hidden">
+                                {/* White Trapezoid */}
+                                <div
+                                    className="bg-white pt-5 pb-5 px-6 sm:px-8 flex flex-col items-center text-center w-full"
+                                    style={{
+                                        clipPath: 'polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%)'
+                                    }}
                                 >
-                                    <h1 className="text-[14px] sm:text-[16px] font-black text-slate-900 leading-none tracking-tight fade-up font-heading uppercase whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
-                                        SİGORTADA <span className="text-blue-600">GÜVENİ</span>, ÇÖZÜMDE <span className="text-brand-red italic">HAKİKİYİ SEÇİN.</span>
+                                    <h1 className="text-[11px] min-[375px]:text-[13px] sm:text-[15px] font-extrabold text-slate-800 leading-none tracking-wide fade-up uppercase whitespace-nowrap w-full" style={{ animationDelay: '0.2s', fontFamily: "'Outfit', sans-serif", letterSpacing: '0.05em' }}>
+                                        SİGORTADA <span className="text-brand-blue font-black">GÜVENİ</span>, ÇÖZÜMDE <span className="text-brand-red font-black italic">HAKİKİYİ SEÇİN.</span>
                                     </h1>
                                 </div>
                             </div>
@@ -196,7 +200,7 @@ const Hero = () => {
                             {/* Left Column */}
                             <div className="max-w-2xl mx-auto lg:mx-0">
                                 {/* Desktop Only Headline */}
-                                <h1 className="hidden lg:block text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
+                                <h1 className="hidden lg:block text-3xl md:text-4xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tighter fade-up font-heading uppercase" style={{ animationDelay: '0.2s' }}>
                                     SİGORTADA <span className="bg-clip-text text-transparent bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue bg-[length:200%_auto] animate-shimmer">GÜVENİ</span>,<br />
                                     ÇÖZÜMDE <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-red-500 italic drop-shadow-sm">HAKİKİYİ SEÇİN.</span>
                                 </h1>
@@ -218,7 +222,7 @@ const Hero = () => {
                                         <ShieldCheck className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                                         Hemen Teklif Al
                                     </a>
-                                    <a 
+                                    <a
                                         href="#hizmetler"
                                         className="text-sm font-black text-slate-600 hover:text-brand-blue transition-all px-6 py-4 flex items-center gap-3 group relative"
                                     >
@@ -346,44 +350,42 @@ const Hero = () => {
                     {/* Category Tabs Header - Simplified Full Width */}
                     <div className="mb-10 w-full lg:max-w-5xl lg:mx-auto bg-slate-100/90 lg:bg-slate-100/80 rounded-none lg:rounded-[2.5rem] border-y lg:border border-slate-200/60 shadow-inner overflow-hidden">
                         <div className="grid grid-cols-2 lg:flex lg:flex-nowrap w-full gap-2 p-4 lg:p-2 lg:justify-center">
-                        {services.map((service, index) => (
-                            <button
-                                key={index}
-                                type="button"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleCategoryChange(index);
-                                }}
-                                className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 rounded-2xl sm:rounded-[1.8rem] transition-all duration-500 whitespace-nowrap w-full ${
-                                    activeCategory === index 
-                                    ? 'bg-white text-brand-blue shadow-[0_15px_30px_-5px_rgba(0,102,255,0.15)] border border-brand-blue/10 scale-[1.02]' 
-                                    : 'text-slate-500 hover:text-slate-900 hover:bg-white/50'
-                                }`}
-                            >
-                                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-500 ${
-                                    activeCategory === index ? 'bg-brand-blue text-white' : 'bg-white shadow-sm'
-                                }`}>
-                                    <div className="scale-[0.6] sm:scale-75">
-                                        {service.icon}
+                            {services.map((service, index) => (
+                                <button
+                                    key={index}
+                                    type="button"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleCategoryChange(index);
+                                    }}
+                                    className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 rounded-2xl sm:rounded-[1.8rem] transition-all duration-500 whitespace-nowrap w-full ${activeCategory === index
+                                        ? 'bg-white text-brand-blue shadow-[0_15px_30px_-5px_rgba(0,102,255,0.15)] border border-brand-blue/10 scale-[1.02]'
+                                        : 'text-slate-500 hover:text-slate-900 hover:bg-white/50'
+                                        }`}
+                                >
+                                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-500 ${activeCategory === index ? 'bg-brand-blue text-white' : 'bg-white shadow-sm'
+                                        }`}>
+                                        <div className="scale-[0.6] sm:scale-75">
+                                            {service.icon}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="text-left leading-none uppercase">
-                                    <h3 className="text-[11px] sm:text-sm font-black font-heading mb-1 tracking-tight">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-[7px] sm:text-[9px] font-bold opacity-50 tracking-[0.1em]">
-                                        {service.products.length} Ürün
-                                    </p>
-                                </div>
-                            </button>
-                        ))}
+                                    <div className="text-left leading-none uppercase">
+                                        <h3 className="text-[11px] sm:text-sm font-black font-heading mb-1 tracking-tight">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-[7px] sm:text-[9px] font-bold opacity-50 tracking-[0.1em]">
+                                            {service.products.length} Ürün
+                                        </p>
+                                    </div>
+                                </button>
+                            ))}
                         </div>
                     </div>
 
                     {/* Products Display Area */}
                     <div className="max-w-6xl mx-auto sm:px-0">
                         {services.map((service, sIndex) => (
-                            <div 
+                            <div
                                 key={sIndex}
                                 className={`${activeCategory === sIndex ? 'block' : 'hidden'} animate-in fade-in slide-in-from-bottom-4 duration-700`}
                             >
@@ -394,7 +396,7 @@ const Hero = () => {
                                             const getIllustration = (name: string) => {
                                                 const n = name.toLowerCase();
                                                 const props = { className: "w-12 h-12 stroke-[1]" };
-                                                
+
                                                 if (n.includes('trafik')) return <Car {...props} />;
                                                 if (n.includes('kasko')) return <ShieldCheck {...props} />;
                                                 if (n.includes('yeşil kart')) return <Globe {...props} />;
@@ -406,7 +408,7 @@ const Hero = () => {
                                                 if (n.includes('cep telefon') || n.includes('akıllı')) return <Smartphone {...props} />;
                                                 if (n.includes('hayvan')) return <Dog {...props} />;
                                                 if (n.includes('kaza')) return <Activity {...props} />;
-                                                
+
                                                 return <Shield {...props} />;
                                             };
 
@@ -431,7 +433,7 @@ const Hero = () => {
                                             const iconStyle = iconColors[pIndex % iconColors.length];
 
                                             return (
-                                                <div 
+                                                <div
                                                     key={pIndex}
                                                     className={`group/item relative ${cardStyle} p-5 sm:p-6 rounded-3xl hover:border-brand-blue/30 transition-all duration-500 hover:shadow-[0_25px_50px_-20px_rgba(0,0,0,0.1)] flex flex-col justify-between min-h-[220px] sm:min-h-[240px] h-full overflow-hidden`}
                                                     style={{ transitionDelay: `${pIndex * 50}ms` }}
@@ -448,28 +450,28 @@ const Hero = () => {
                                                             {product.name}
                                                         </h4>
                                                     </div>
-                                                    
+
                                                     {/* Illustration Space */}
                                                     <div className="flex-1 flex items-center justify-center my-4 relative">
                                                         <div className={`${iconStyle.replace('600', '300')} opacity-40 group-hover/item:opacity-60 transition-all duration-700 transform group-hover/item:scale-125 group-hover/item:-rotate-6 animate-in zoom-in-50 duration-500`}>
                                                             {getIllustration(product.name)}
                                                         </div>
-                                                        
+
                                                         {/* Decorative Element */}
                                                         <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-1 ${iconStyle.replace('600', '100')} rounded-full group-hover/item:bg-brand-blue/10 transition-colors duration-500`} />
                                                     </div>
 
                                                     {/* Buttons - Redesigned */}
                                                     <div className="relative z-10 flex items-center gap-4 mt-2">
-                                                        <a 
-                                                            href={product.quoteLink} 
-                                                            target="_blank" 
+                                                        <a
+                                                            href={product.quoteLink}
+                                                            target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="flex-1 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-[10px] font-black uppercase tracking-wider hover:bg-blue-600 transition-all active:scale-95 shadow-md shadow-blue-500/30"
                                                         >
                                                             TEKLİF
                                                         </a>
-                                                        <a 
+                                                        <a
                                                             href={product.infoLink}
                                                             className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/60 text-slate-600 hover:text-brand-red hover:bg-white border border-white/80 shadow-sm transition-all duration-300 text-[10px] font-black uppercase tracking-widest whitespace-nowrap"
                                                         >
@@ -485,7 +487,7 @@ const Hero = () => {
                                 {/* Show More Button - Mobile Only */}
                                 {!isExpanded && service.products.length > 3 && (
                                     <div className="mt-8 flex justify-center sm:hidden">
-                                        <button 
+                                        <button
                                             onClick={() => setIsExpanded(true)}
                                             className="w-full bg-slate-50 text-slate-500 border border-slate-100 py-4 rounded-2xl font-black uppercase text-[10px] tracking-[0.2em] flex items-center justify-center gap-2 hover:bg-white hover:text-brand-blue transition-all active:scale-95"
                                         >
