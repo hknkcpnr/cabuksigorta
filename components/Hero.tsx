@@ -290,25 +290,6 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/* Stats Strip — OUTSIDE background area */}
-                <div className="wrapper relative z-10 pb-6 mt-0 fade-up" style={{ animationDelay: '0.4s' }}>
-                    <div className="grid grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
-                        {[
-                            { value: 10000, suffix: "+", label: "Memnun Müşteri", color: "text-brand-blue", bgColor: "bg-white/80 backdrop-blur-sm" },
-                            { value: 50000, suffix: "+", label: "Hazırlanan Poliçe", color: "text-brand-red", bgColor: "bg-slate-50/80 backdrop-blur-sm" },
-                            { value: 20, suffix: "+", label: "İş Ortağı", color: "text-brand-blue", bgColor: "bg-white/80 backdrop-blur-sm" },
-                        ].map((item, index) => (
-                            <div key={index} className={`flex flex-col items-center justify-center p-4 sm:p-10 ${item.bgColor} transition-all border-r border-slate-100 last:border-0`}>
-                                <div className={`text-xl md:text-5xl font-black ${item.color} tracking-tighter mb-1 sm:mb-2`}>
-                                    <StatCounter end={item.value} suffix={item.suffix} />
-                                </div>
-                                <p className="text-slate-400 font-bold uppercase text-[7px] md:text-[10px] tracking-[0.2em] md:tracking-[0.25em] text-center">
-                                    {item.label}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
             </header>
 
             {/* Service Selection section */}
