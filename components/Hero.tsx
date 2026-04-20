@@ -187,7 +187,7 @@ const Hero = () => {
                                     }}
                                 >
                                     <h1 className="text-[11px] min-[375px]:text-[13px] sm:text-[15px] font-extrabold text-slate-800 leading-none tracking-wide fade-up uppercase whitespace-nowrap w-full" style={{ animationDelay: '0.2s', fontFamily: "'Outfit', sans-serif", letterSpacing: '0.05em' }}>
-                                        SİGORTADA <span className="text-brand-blue font-black">GÜVENİ</span>, ÇÖZÜMDE <span className="text-brand-red font-black italic">HAKİKİYİ SEÇİN.</span>
+                                        SİGORTADA <span className="text-blue-500 font-black">GÜVENİ</span>, ÇÖZÜMDE <span className="text-brand-red font-black italic">HAKİKİYİ SEÇİN.</span>
                                     </h1>
                                 </div>
                             </div>
