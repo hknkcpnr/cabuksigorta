@@ -62,7 +62,7 @@ export default function RootLayout({
     "image": "https://cabuksigorta.com.tr/logo.png",
     "@id": "https://cabuksigorta.com.tr",
     "url": "https://cabuksigorta.com.tr",
-    "telephone": "02323367XXX", // Gerçek numara ile güncellenmeli
+    "telephone": "02323367172", // Güncel numara
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "İzmir, Türkiye",
