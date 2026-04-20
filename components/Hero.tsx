@@ -143,19 +143,34 @@ const Hero = () => {
                     {/* Background/Top Circle Image */}
                     <div className="relative lg:absolute lg:inset-0 z-0 flex items-center justify-center p-0 lg:p-8 mb-1 lg:mb-0">
                         <div className="relative w-full aspect-[16/10] sm:aspect-video lg:aspect-auto lg:w-full lg:max-w-xl lg:h-[450px] rounded-none lg:rounded-none overflow-hidden lg:overflow-visible bg-white lg:bg-transparent shadow-none lg:shadow-none border-0 lg:border-none lg:translate-x-16 lg:-translate-y-12 transition-all duration-700 hover:scale-105 lg:hover:scale-110">
-                            <Image
-                                src={isMobile ? '/mobilbanner.jpg' : '/banner-3.jpg'}
-                                alt="81 İl Kapsamlı Dijital Sigorta Çözümleri - Hakiki Çabuk Sigorta"
-                                fill
-                                priority
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                                className={`object-cover lg:object-contain opacity-100 lg:mix-blend-multiply ${isMobile ? 'animate-hero-zoom' : 'animate-hero-fade'} will-change-transform`}
-                                style={{
-                                    animationDuration: '4s',
-                                    maskImage: isMobile ? 'none' : 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, black 80%)',
-                                    WebkitMaskImage: isMobile ? 'none' : 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, black 80%)'
-                                }}
-                            />
+                            <div className="hidden sm:block absolute inset-0">
+                                <Image
+                                    src="/banner-3.jpg"
+                                    alt="Dijital Sigorta Çözümleri - Hakiki Çabuk Sigorta"
+                                    fill
+                                    priority
+                                    sizes="100vw"
+                                    className="object-cover lg:object-contain opacity-100 lg:mix-blend-multiply animate-hero-fade will-change-transform"
+                                    style={{
+                                        animationDuration: '4s',
+                                        maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, black 80%)',
+                                        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, black 80%)'
+                                    }}
+                                />
+                            </div>
+                            <div className="block sm:hidden absolute inset-0">
+                                <Image
+                                    src="/mobilbanner.jpg"
+                                    alt="Mobil Sigorta Çözümleri"
+                                    fill
+                                    priority
+                                    sizes="100vw"
+                                    className="object-cover opacity-100 animate-hero-zoom will-change-transform"
+                                    style={{
+                                        animationDuration: '4s'
+                                    }}
+                                />
+                            </div>
                             {/* Floating Badge on Image - Top Centered Minimalist (MOBILE ONLY) */}
                             <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md text-brand-blue px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.15em] border border-brand-blue/10 shadow-lg animate-fade-in whitespace-nowrap lg:hidden" style={{ animationDelay: '0.5s' }}>
                                 <Zap className="w-3 h-3 fill-brand-red text-brand-red" />
@@ -171,9 +186,9 @@ const Hero = () => {
                                         width: '100%'
                                     }}
                                 >
-                                    <h1 className="text-[18px] sm:text-2xl font-black text-white leading-[1.2] tracking-tight fade-up font-heading" style={{ animationDelay: '0.2s' }}>
-                                        Sigortada <span className="text-emerald-400 italic">Güveni</span>,<br />
-                                        Çözümde <span className="text-brand-red italic">Hakikiyi Seçin.</span>
+                                    <h1 className="text-[28px] sm:text-3xl font-black text-white leading-[1.1] tracking-tighter fade-up font-heading" style={{ animationDelay: '0.2s' }}>
+                                        Sigortada <span className="text-blue-500 italic">Güveni</span>,<br />
+                                        Çözümde <span className="text-brand-red italic text-shadow-sm">Hakikiyi Seçin.</span>
                                     </h1>
                                 </div>
                             </div>
