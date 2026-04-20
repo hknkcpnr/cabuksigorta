@@ -1,0 +1,6 @@
+images
+sigorta icon
+banner-3.jpg
+cabuksigortaLogo.png
+hero-bg.png
+sikcasorulansorula.jpg
